@@ -34,7 +34,7 @@ def clear():
       t.sleep(3)
       os.system('python3 main.py')
   elif clear == 'no':
-    print('files wont be cleared')
+    print('files wont be cleared\n')
   else:
     print('\033[H\033[J')
     print(cl('invalid choice', 'red'))
@@ -56,14 +56,15 @@ else:
   print('\033[H\033[J')
   os.system('python3 main.py')
 
-
+attempt = 0
 while True:
   def get_random_string(length):
       random_list = []
       for i in range(length):
           random_list.append(random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits + '-' + '_'))
       return ''.join(random_list)
-  url = "https://www.youtube.com/watch?v=" + get_random_string(11)
+  #"https://www.youtube.com/watch?v=" + get_random_string(11)
+  url = "https://waa.ai/spingen"
   a = ua.random
   headers = {
     'User-Agent': a
@@ -73,7 +74,7 @@ while True:
     print('\033[H\033[J')
     sys.exit('error 429 - too many requests ):\n')
   else:
-    #soup = BeautifulSoup(urllib.request.urlopen(url, headers=headers), features="html5lib")
+    #soup = BeautifulSoup(urllib.request.urlopen(url), features="html5lib")
     tree = fromstring(res.content)
     title = tree.findtext('.//title')
     if title == " - YouTube" or "YouTube":
@@ -88,5 +89,6 @@ while True:
       file = open("YESvalid.txt", "a+")
       file.write('url: "' + url + '"\nuser-agent: "' + a + '"\n\n')
       file.close()
-    print('youtube url: ' + url + '\nis valid: ' + cl(valid, color) + '\n')
+    attempt = attempt + 1
+    print('youtube url: ' + url + '\nis valid: ' + cl(valid, color) + '\nattempt: ' + cl(str(attempt), 'cyan') + '\n')
   t.sleep(speed)
