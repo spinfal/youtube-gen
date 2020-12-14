@@ -1,0 +1,11 @@
+example urls...
+
+
+url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+user-agent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.0 Safari/537.36"
+
+url: "https://www.youtube.com/watch?v=8ybW48rKBME"
+user-agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1664.3 Safari/537.36"
+
+url: "https://www.youtube.com/watch?v=oHg5SJYRHA0"
+user-agent: "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1500.55 Safari/537.36"
