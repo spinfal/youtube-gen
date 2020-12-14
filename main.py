@@ -63,8 +63,7 @@ while True:
       for i in range(length):
           random_list.append(random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits + '-' + '_'))
       return ''.join(random_list)
-  #"https://www.youtube.com/watch?v=" + get_random_string(11)
-  url = "https://waa.ai/spingen"
+  url = "https://www.youtube.com/watch?v=" + get_random_string(11)
   a = ua.random
   headers = {
     'User-Agent': a
